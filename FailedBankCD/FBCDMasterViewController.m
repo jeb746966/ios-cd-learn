@@ -7,6 +7,8 @@
 //
 
 #import "FBCDMasterViewController.h"
+#import "FailedBankInfo.h"
+#import "FailedBankDetails.h"
 
 @interface FBCDMasterViewController ()
 
@@ -14,6 +16,7 @@
 
 @implementation FBCDMasterViewController
 @synthesize managedObjectContext;
+@synthesize failedBankInfos;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -33,6 +36,14 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"FailedBankInfo" inManagedObjectContext:managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSError *error;
+    self.failedBankInfos = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    self.title = @"Failed Banks";
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,24 +56,30 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [failedBankInfos count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
     
     // Configure the cell...
+    FailedBankInfo *info = [failedBankInfos objectAtIndex:indexPath.row];
+    cell.textLabel.text = info.name;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@",
+                                 info.city, info.state];
     
     return cell;
 }
