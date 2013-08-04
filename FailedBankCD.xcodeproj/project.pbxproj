@@ -19,8 +19,7 @@
 		52902A7017AD434D000BD712 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52902A6F17AD434D000BD712 /* Default-568h@2x.png */; };
 		52902A7317AD434D000BD712 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52902A7117AD434D000BD712 /* MainStoryboard.storyboard */; };
 		52902A7617AD434D000BD712 /* FailedBankCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52902A7417AD434D000BD712 /* FailedBankCD.xcdatamodeld */; };
-		52902A7917AD434D000BD712 /* FBCDMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52902A7817AD434D000BD712 /* FBCDMasterViewController.m */; };
-		52902A7C17AD434D000BD712 /* FBCDDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52902A7B17AD434D000BD712 /* FBCDDetailViewController.m */; };
+		52902A8417AD4398000BD712 /* FBCDMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52902A8317AD4398000BD712 /* FBCDMasterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,10 +39,8 @@
 		52902A6F17AD434D000BD712 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		52902A7217AD434D000BD712 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		52902A7517AD434D000BD712 /* FailedBankCD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FailedBankCD.xcdatamodel; sourceTree = "<group>"; };
-		52902A7717AD434D000BD712 /* FBCDMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBCDMasterViewController.h; sourceTree = "<group>"; };
-		52902A7817AD434D000BD712 /* FBCDMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBCDMasterViewController.m; sourceTree = "<group>"; };
-		52902A7A17AD434D000BD712 /* FBCDDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBCDDetailViewController.h; sourceTree = "<group>"; };
-		52902A7B17AD434D000BD712 /* FBCDDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBCDDetailViewController.m; sourceTree = "<group>"; };
+		52902A8217AD4398000BD712 /* FBCDMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBCDMasterViewController.h; sourceTree = "<group>"; };
+		52902A8317AD4398000BD712 /* FBCDMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBCDMasterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,13 +89,11 @@
 		52902A5F17AD434D000BD712 /* FailedBankCD */ = {
 			isa = PBXGroup;
 			children = (
+				52902A8217AD4398000BD712 /* FBCDMasterViewController.h */,
+				52902A8317AD4398000BD712 /* FBCDMasterViewController.m */,
 				52902A6817AD434D000BD712 /* FBCDAppDelegate.h */,
 				52902A6917AD434D000BD712 /* FBCDAppDelegate.m */,
 				52902A7117AD434D000BD712 /* MainStoryboard.storyboard */,
-				52902A7717AD434D000BD712 /* FBCDMasterViewController.h */,
-				52902A7817AD434D000BD712 /* FBCDMasterViewController.m */,
-				52902A7A17AD434D000BD712 /* FBCDDetailViewController.h */,
-				52902A7B17AD434D000BD712 /* FBCDDetailViewController.m */,
 				52902A7417AD434D000BD712 /* FailedBankCD.xcdatamodeld */,
 				52902A6017AD434D000BD712 /* Supporting Files */,
 			);
@@ -189,8 +184,7 @@
 				52902A6617AD434D000BD712 /* main.m in Sources */,
 				52902A6A17AD434D000BD712 /* FBCDAppDelegate.m in Sources */,
 				52902A7617AD434D000BD712 /* FailedBankCD.xcdatamodeld in Sources */,
-				52902A7917AD434D000BD712 /* FBCDMasterViewController.m in Sources */,
-				52902A7C17AD434D000BD712 /* FBCDDetailViewController.m in Sources */,
+				52902A8417AD4398000BD712 /* FBCDMasterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
